@@ -1,0 +1,874 @@
+Declaration and initializations
+
+Question 1
+
+Which of the following is the correct output for the program given below?
+
+#include <stdio.h>
+
+void main()
+
+struct emp
+
+{
+
+char name[20];
+
+int age; float sal;
+
+};
+
+struct emp e = {"Tiger"); 
+printf ("\n%d %f", e.age, e.sal);
+
+}
+
+A. 0 0.000000
+
+B. Garbage values
+
+C. Error
+
+D. None of the above
+
+
+
+Q2)
+Which of the following is not a user-defined data type?
+
+A.
+
+ struct book
+{
+char name[10]; int pages;
+
+float price;
+
+};
+
+B.
+
+ long int1 = 23.5;
+
+C. 
+
+enum day {Sun, Mon, Tue, Wed};
+
+D.
+
+ union a
+{
+
+int i;
+
+char ch[2];
+
+};
+
+
+Control instructions
+
+Question 3
+
+Point out the error, if any, in the following program.
+
+#include <stdio.h>
+void main()
+
+{
+
+int i = 1;
+switch (i)
+{
+
+case 1:
+
+printf ("\nRadioactive cats have 18 half-lives."); break;
+
+case 1*2 +4:
+
+printf ("\nBottle for rent - inquire within.");
+break;
+    }
+
+}
+
+Question 4
+
+Which of the following is the correct output for the program given below?
+
+#include <stdio.h>
+void main()
+{
+int a = 300, b, c;
+if (a >= 400)
+      b = 300;
+      c = 200;
+printf ("\n%d %d %d", a, b, c);
+}
+
+Question 5
+
+Which of the following statements are correct about the program given below?
+
+#include <stdio.h>
+void main()
+
+{
+
+int x = 30, y = 40;
+
+if (x == y)
+
+printf ("x is equal to y");
+
+ printf ("x is greater than y");
+
+else if (x >y)
+
+else if (x<y)
+
+printf ("x is less than y");
+
+}
+
+A. Error: 'Statement missing'
+
+B. Error: 'Expression syntax'
+
+C. Error: 'Lvalue required'
+
+D. Error: 'Rvalue required'
+
+
+
+Question 6
+
+Which of the following is the correct output for the program given below?
+
+#include <stdio.h>
+void main() {
+
+int i = 0;
+
+for (; i < 5; i++); 
+
+printf ("%d", i);
+
+}
+
+A. 0 1 2 3 4
+
+B. 5
+
+C. 1 2 3 4
+
+D. 6
+
+
+Question 7
+
+On executing the following program how many times would the message "Keep it up" would get printed?
+
+#include <stdio.h> 
+void main()
+
+{
+
+int x;
+
+for (x=-1; x <= 10; x++)
+
+{
+
+if (x<5) continue;
+
+else
+
+break;
+
+printf ("Keep it up");
+}
+
+A. Infinite times
+
+B. 11 times
+
+C. 0 times
+
+D. Once
+
+E. 10 times
+
+
+
+Expressions
+
+Question 8
+
+Which of the following is the correct output for the program given below?
+
+#include <stdio.h> 
+void main()
+{
+int x = 4, y, z;
+
+y=--x;
+
+Z=x--;
+
+printf ("%d %d %d", x, y, z);
+
+}
+
+A. 4  3  3
+
+B. 4  3  2
+
+C. 3  3  2
+
+D. 2  3  3
+
+E. 2  2   3
+
+
+
+Question 9
+
+Which of the following is the correct output for the program below? program give
+
+#indude <stdio.h>
+void main()
+{
+
+    float a=0.7;
+     if(a<0.7f)
+      printf ("C");
+
+else
+printf ("C++");
+}
+
+A. C
+
+B. C++
+
+C. Compiler reports an error saying a float cannot be compared with a double.
+
+D. None of the above
+
+
+Functions
+
+Question 10
+
+Which of the following is the correct output for the program given below?
+
+#include <stdio.h>
+void main()
+
+int i=1;
+
+if(!i)
+printf ("Recursive calls are painful\n");
+
+else
+
+{
+
+i=0;
+printf ("Recursive calls are challenging\n");
+main();
+   }
+}
+
+A. Recursive calls are challenging
+
+     Recursive calls are painful
+
+B.Recursive calls are painful
+
+C. Recursive calls are real pain!
+
+    Recursive calls are challenging
+
+D. Recursive calls are challenging .
+
+E.The code prints Recursive calls are challenging
+
+    Recursive calls are challenging (infinitely...)
+
+
+Question 11
+
+How many times the following program will print "Jamboree"?
+
+#include <stdio.h>
+
+void main()
+{
+printf ("\nJamboree");
+
+main();
+
+}
+
+A. Infinite number of times
+
+B. 32767 times
+
+C 65535 times
+
+D. Till the stack doesn't overflow
+
+
+Question 12
+
+Which of the following is the correct output for the program given below?
+
+#include <stdio.h>
+void main()
+
+{
+int fun (int);
+int i = fun (10);
+printf ("%d\n", --i);
+}
+int fun (int i)
+{
+return (i++);
+
+}
+
+A. 9
+
+B. 10
+
+C. 11
+
+D. 8
+
+
+Question 13
+
+Which of the following is the correct output for the program given below?
+
+#indude <stdio.h>
+void fun (int);
+
+void main()
+{
+int a;
+
+a=3;
+fun (a);
+}
+
+void fun (int n)
+{
+if(n>0)
+{
+fun (-n);
+printf("%d", n);
+
+fun (-n);
+     }
+
+}
+
+A. 0210
+
+B 1120.
+
+C 0102
+
+D 0120
+
+Question 13
+
+Which of the following statements are correct about the program given below?
+
+#include<stdio.h>
+int reverse (int);
+void main()
+{
+int no = 5;
+
+reverse (no);
+
+}
+
+reverse (int no)
+{
+if (no == 0)
+return 0;
+
+else
+
+printf("%d", no);
+
+reverse (no--);
+
+}
+
+A. Program outputs values 5 4 3 2 1.
+
+B. Program outputs values 1 2 3 4 5.
+
+C. Program outputs values 5 4 3 2 1 0.
+
+D. Program runs in an infinite loop.
+
+
+
+The C preprocessor
+Question 14
+
+What will be the output of the following program?
+
+#include <stdio.h>
+
+#define FUN(i,j) i##j
+
+void main()
+
+{
+
+int val1 = 10;
+
+int val 12 = 20;
+
+printf ("%d", FUN ( val1,2));
+
+}
+
+A. 10
+
+B. 20
+
+C. 1020
+
+D. 12
+
+Pointers
+
+Question 15
+
+Which of the following is the correct output for the program given below?
+
+#include <stdio.h>
+
+void main()
+{
+
+int arr[1] = {10};
+printf ("%d", 0[ arr]);
+
+}
+A. 1
+
+B. 10
+
+C. 0
+
+D. None of the above
+
+Question 16
+
+What will be the output of the following program, if the array begins at 65486 and each integer occupies 2 bytes?
+
+#include <stdio.h>
+
+void main()
+
+{
+int arr[] = {12, 14, 15, 23, 45);
+
+printf ("%u%u", arr + 1, &arr+1);
+}
+
+
+Question 17
+
+Which of the following is the correct output for the program given below?
+
+#include <stdio.h>
+
+void main()
+{
+
+void fun (int, int[]);
+
+int arr[] = {1,2,3,4};
+
+int i;
+
+fun (4, arr);
+
+for(i=0;i<4;i++)
+    printf ("%d", arr[i]);
+}
+void fun (int n, int arr[])
+{
+int *p = 0;
+
+int i = 0;
+while (i++<n)
+
+p=&arr[i];
+
+*p = 0;
+
+}
+
+A. 2 3 4 5
+
+B. 1 2 3 4
+
+C. 0 1 2 3
+
+D. 3 2 1 0
+
+
+Question 18
+
+Which of the following is the correct output for the program given below?
+
+#include <stdio.h>
+
+void main()
+{
+char str[7]="Strings";
+printf ("%s", str);
+
+}
+
+A. Error
+
+B. Strings
+
+C. Cannot predict
+
+D. None of the above
+
+Question 19
+
+Point out the error, if any, in the following code.
+
+#include <stdio.h>
+void main()
+
+{
+
+struct emp
+
+{
+
+char name[ 25 ];
+float bs;
+
+int age;
+
+};
+
+struct emp e
+
+e.name = "Rahul";
+
+e.age = 25;
+
+printf ("%s %d", e.name, e.age);
+
+}
+
+
+Question 20
+
+Which of the following is the correct output for the program given below?
+
+#include <stdio.h>
+void main()
+
+{
+static char *s[] = { "black", "white", "pink", "violet" };
+char **ptr[] = {s+3, s +2, s +1, s}, ***p;
+
+p = ptr;
+
+++p;
+printf ("%s". **p+1);
+
+}
+
+A. ink
+
+B. ack
+
+C. ite
+
+D. let
+
+Array
+
+Question 21
+
+Which of the following is the correct output for the program given 
+below?
+
+#include <stdio.h>
+void main()
+{
+static int arr[] = {0, 1, 2, 3, 4);
+
+int *p[]= (arr, arr + 1, arr +2, arr +3, arr + 4);
+
+int **ptr = p;
+
+ptr++;
+
+printf ("\n%d %d %d", ptr - p, **ptr-arr, **ptr);
+
+*ptr++;
+
+printf ("\n%d %d %d", ptr -p, *ptr - arr, **ptr);
+
+*++ptr;
+
+printf ("\n%d %d %d", ptr - p. "ptr - arr, "*ptr);
+
+++*ptr ;
+printf ("\n%d %d %d", ptr - p. "ptr - arr, *ptr);
+
+}
+
+
+Question 22
+
+In C, if you pass an array as an argument to a function, what actually gets passed?
+
+A. Base address of the array
+
+B. First element of the array
+
+C. Address of the last element of the array
+
+D. Number of elements of the array
+
+E. Address of the last element of the array
+
+Question 23
+
+What will happen if in a C program you assign a value to an array element whose subscript exceeds the size of array?
+
+A. The element will be set to 0.
+
+B. Nothing, it's done all the time.
+
+C. The compiler would report an error.
+
+D. The program may crash if some important data gets overwritten.
+
+E. The array size would appropriately grow.
+
+
+Strings
+
+Question 24
+
+Which of the following is the correct output for the program given below?
+
+#include <stdio.h>
+void main()
+{
+char t;
+
+char "p1 = "Harder you work", "p2;
+
+p2 = p1;
+
+p1= "Luckier you get";
+
+printf ("%s %s", p1, p2);
+}
+
+A. Harder you work Luckier you get
+
+B. Luckier you get Harder you work
+
+C. Harder you work Harder you work
+
+D. Luckier you get Luckier you get
+
+
+Question 25
+
+Which of the following is the correct output for the program given below?
+
+#include <stdio.h>
+#include <string.h>
+
+void main()
+{
+char str1[20] = "Hello", str2[20] = " World";
+
+printf ("%s", strcpy (str2, strcat (str1, str2)));
+
+}
+
+A. Hello
+
+B. World
+
+C. Hello World
+
+D. WorldHello
+
+
+Question 26
+
+Which of the following is the correct output for the program given below?
+
+#include <stdio.h>
+void main()
+
+{
+
+char str[]="Nagpur";
+str = "Kanpur";
+
+str [0] = 'K';
+printf("%s", str);
+
+str="Kanpur";
+printf ("%s", str +1);
+
+}
+A. Kagpur Kanpur
+
+B. Nagpur Kanpur
+
+C. Kagpur anpur
+
+D. Error
+
+
+Structures Union and enumerations
+
+Question 27
+
+Which of the following is the correct output for the program given below?
+
+#include <stdio.h>
+
+void main()
+{
+enum days {MON =-1, TUE, WED = 6, THU, FRI, SAT };
+
+printf ("%d %d %d %d %d %d", ++MON, TUE, WED, THU, FRI, SAT);
+
+}
+
+A. -101234
+
+B. Error
+
+C. 016345
+
+D. 006789
+
+
+Question 28
+
+Which of the following statements are correct about the program given below?
+
+#indude <stdio.h>
+
+void main()
+
+{
+struct emp
+
+{
+char name[20];
+
+int age;
+
+float sal;
+};
+struct emp e[2];
+int i=0;
+
+for(i=0;i<2; i++)
+
+  scanf("%s %d %f", e[i] name, &e[1].age, &e[i]sal); for(i=0;i<2; i++);
+for(i=0;i<2; i++)
+printf ("%s %d %f", e[i].name, e[i].age, e[i].sal);
+
+A Error: 'scanf() function cannot be used for structure elements'
+
+B. The code runs successfully.
+
+C. Error: 'Floating-point formats not linked. Abnormal program termination'.
+
+D. Error: 'Structure variable must be initialized'.
+
+Question 29
+
+Which of the following statement correctly assigns 45 to month using pointer variable pdt?
+
+#indude <stdio.h>
+struct date
+{
+int day ;
+int month;
+int year;
+};
+void main()
+
+{
+
+struct date d;
+struct date *pdt;
+pdt = &d;
+
+}
+
+A pdt month = 12;
+
+B. &pdt.month = 12;
+
+C. d.month= 12;
+
+D. pdt-> month= 12;
+
+
+Input /Output
+
+Question 30
+
+Which of the following is the correct output for the program given below?
+
+#include <stdio.h>
+
+void main()
+{
+FILE *fp;
+
+char ch, str[7];
+
+fp = fopen("try.c", "T");
+/*try.c exists and contains "This is Nagpur" "/
+fseek (fp, 9L, SEEK_CUR);
+fgets (str. 5, fp);
+
+puts (str);
+
+}
+
+A. agpur
+
+B. gpur 
+
+C. Nagp
+
+D. agpu 
